@@ -20,7 +20,7 @@ def prime_number(n):
 		if n%x == 0:
 			return False
 
-	print n, 'is a prime number'
+	print (n, 'is a prime number')
 	return True
 
 '''
@@ -38,5 +38,22 @@ calls prime_number(n) which also has a linear complexity results in a function
 	O(n*n)
 	O(n^2)
 '''
+
+def is_prime(n):
+	'''Checking if a number is prime or not'''
+
+	if type(n) == 'string':
+		raise TypeError
+		return False
+
+	if n == 1:
+		return True
+
+	for x in range(2, n):
+		if n%x == 0:
+			return False
+
+	return True
+
 if __name__ == "__main__":
 	get_prime_numbers_in_range(15)
